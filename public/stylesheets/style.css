@@ -1,0 +1,136 @@
+/***************
+	LAYOUT
+***************/
+
+body 
+{
+background: #151515 url('http://wbdlive.com/images/nameimages/header.png');background-repeat:no-repeat;
+}
+
+#container 
+{
+width: 90%;
+margin: 10px auto;
+/*border: 1px solid gray;*/
+}
+
+#top 
+{
+padding: .5em;
+/*border-bottom: 1px solid gray;*/
+}
+
+#topnav
+{
+float: right;
+display:inline;
+}
+
+#leftnav 
+{
+float: left;
+width: 160px;
+margin: 0;
+padding: 1em;
+}
+
+#links
+{
+position: relative;
+top: 260px;
+left: 160px;
+}
+
+a:link, a:active, a:visited, a:hover {
+    color: #ff3f27;
+    text-decoration: none;
+}
+
+#content
+{
+margin-left: 480px;
+/*border-left: 1px solid gray;*/
+padding: 1em;
+max-width: 22em;
+min-height: 400px;
+}
+
+#text 
+{
+position: relative;top: -20px;
+font: 12px helvetica;
+color: #fff;
+}
+
+#footer
+{
+clear: both;
+color: white;
+font: 12px helvetica;
+margin: 0;
+padding: .5em;
+/*border-top: 1px solid gray;*/
+}
+
+#footerimage
+{
+margin-left:160px;
+float:left;
+}
+
+div.login
+{
+display:inline;
+}
+#twitter
+{}
+
+#submit_box
+{
+background: #EFEFEF;
+padding: 10px;
+overflow: hidden
+}
+
+#submit_box img {
+    width: 310px;
+}
+
+#submit_box textarea {
+    background: #000 url('/images/textbox_comments.png');
+}
+
+#submit_box textfield {
+    position: relative;
+    background: #000 url('/images/textbox_name.png');
+}
+
+#submit_tox input {
+}
+div.error_image {
+    position: relative;
+    left:10px;
+    top: -8px;
+}
+
+/***************
+	Style
+***************/
+ul.tweets {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+ul.tweets li {
+        font-family: monospace;
+        font-size: 14px;
+        color: #fff;
+        padding: 4px 8px;
+      }
+
+ul.tweets li a {
+        color: #fa0;
+        font-weight: bold;
+        text-decoration: none;
+      }

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Suggestions: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style' %>
+  </head>
+<body>
+<div id="container">
+<div id="top">&nbsp;</div>
+<div id="leftnav">
+<div id="links">
+<%= link_to image_tag( 'http://wbdlive.com/images/nameimages/vote.png'), '/suggestions/index/1' %>
+<%= link_to image_tag( 'http://wbdlive.com/images/nameimages/rules.png'), '/suggestions/new/1' %><br />
+<a href="http://wbdlive.com/images/icons/twitter.png"><img style="border:none;" src="http://wbdlive.com/images/icons/twitter.png"></a>
+<a href="http://wbdlive.com/images/icons/facebook.png"><img style="border:none;" src="http://wbdlive.com/images/icons/facebook.png"></a>
+<a href="http://wbdlive.com/images/icons/digg.png"><img style="border:none;" src="http://wbdlive.com/images/icons/digg.png"></a>
+<a href="http://wbdlive.com/images/icons/delicious.png"><img style="border:none;" src="http://wbdlive.com/images/icons/delicious.png"></a>
+<a href="http://wbdlive.com/images/icons/reddit.png"><img style="border:none;" src="http://wbdlive.com/images/icons/reddit.png"></a>
+<a href="http://wbdlive.com/images/icons/tumblr.png"><img style="border:none;" src="http://wbdlive.com/images/icons/tumblr.png"></a>
+</div>
+</div>
+
+<div id="content">
+
+<%= yield %>
+<!-- <p style="color: green"><%= flash[:notice] %></p> -->
+</div>
+
+<div id="footer">
+<p><div id="footerimage">
+<img src="http://wbdlive.com/images/Footer_Logo.png">
+</div>
+<div id="twitter">
+<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&#169;Copyright 2009 <b>Designed by the WBD crew | 
+<a href="mailto:aaron@wbdlive.com">Contact</a> | <a href="www.twitter.com/wbdlive">Twitter</a>
+</div>
+&nbsp;<br />
+</p>
+</div>
+</div>
+
+</body>
+</html>

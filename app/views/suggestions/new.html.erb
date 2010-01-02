@@ -1,0 +1,19 @@
+<%= render :partial => 'info'%>
+
+<div id="submit_box">
+  <%= @cerror %>
+
+<% form_for(@suggestion) do |f| %>
+
+  <p class="form">
+    <b>Your <%= f.label :name %> Suggestion:</b> (max 6 characters)<br />
+    <%= f.text_field :name, :size => 55 %>
+  </p>
+  <p><b>A few words about the suggestion:</b>
+    <%= f.text_area :description, :rows => 4, :cols => 55 %>
+  </p>
+  <p>
+    <%= image_submit_tag "submit_button.png" %>
+  </p>
+<% end %>
+</div>

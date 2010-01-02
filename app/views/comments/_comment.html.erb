@@ -1,0 +1,11 @@
+<!-- app/views/comments/_comment.html.erb -->
+<% form_for([@suggestion, @comment]) do |f| %>
+  <p>
+    <b>Body</b><br />
+    <%= f.text_area :body, :rows => 4, :cols => 55%>
+  </p>
+
+  <p>
+    <%= image_submit_tag "submit_button.png" %>
+  </p>
+<% end %>

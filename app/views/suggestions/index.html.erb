@@ -1,0 +1,26 @@
+<div id="text">
+<h1>10 Most recent</h1>
+<table>
+<% @suggestions.each do |suggestion| %>
+  <tr>
+    <td>  ...................................................................................................................................<br /><br />
+<font size="4"><%= link_to suggestion.name, suggestion %></font> Submitted by <font size="3"><%=h suggestion.user_name %></font><br />
+
+</td>
+  </tr>
+<% end %>
+</table>
+...................................................................................................................................<br /><br /><br />
+<h1>10 Random Name</h1>
+<table>
+<% @suggestionsrnd.each do |suggestion| %>
+  <tr>
+    <td>  ...................................................................................................................................<br /><br />
+	<font size="4"><%= link_to suggestion.name, suggestion %></font> Submitted by <font size="3"><%=h suggestion.user_name %></font><br />
+</td>
+  </tr>
+<% end %>
+</table>
+<p><br />
+<font size="2">Have you submitted a name suggestion yet? <font color="red"><%= link_to 'Try it!', new_suggestion_path(@suggestion)%></font></font></p>
+</div>

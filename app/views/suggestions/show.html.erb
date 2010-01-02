@@ -1,0 +1,54 @@
+<div id="text">
+<p>
+  <font size="7">"<%=h @suggestion.name %>"</font>
+</p>
+
+<p>
+  Submitted by:<font size="3"><b> <%=h @suggestion.user_name %></b></font>
+</p>
+
+<% unless @suggestion.description.nil? %>
+<p>
+<br />
+  <font size="3"><b>a bit about the name:</b></font><br />
+  <br />
+    "<%=h @suggestion.description %>"
+</p>
+
+<% end %>
+<hr>
+<br />
+ <%= link_to_remote (image_tag("/images/vote_button.png")),
+   :url => { :action => "tweet", :id => @suggestion.id },
+   :complete => visual_effect(:highlight, :notice)%>
+
+<script type="text/javascript">
+    Event.observe(window, 'load', function() {
+        fadeout.delay(2);
+        Element.hide.delay(3, "notice");
+    });
+    function fadeout(){
+        new Effect.Opacity("notice", {duration:1.5, from:1.0, to:0.0});
+    }
+</script>
+
+<p id="notice" style="color: green"><%= flash[:notice] %></p>
+
+<% unless @suggestion.comments.empty? %>
+  <h3>Comments</h3>
+  <% @suggestion.comments.each do |comment| %>
+  <p><b><%= h comment.user_name %></b> said: "<%= h comment.body %>"</p>
+  <% end %>
+
+<% end %>
+  <hr>
+
+<h3>Leave a Comment!</h3>
+
+<%= render :partial => @comment = Comment.new,
+   :locals => { :button_name => 'Comment!'}%>
+
+<br />
+
+</div>
+

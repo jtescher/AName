@@ -1,0 +1,5 @@
+<ul class='tweets'>
+  <% for tweet in @tweets %>
+    <li><%= image_tag tweet['user']['profile_image_url'] %><br /> <%= link_to tweet['user']['screen_name'] + ':', 'http://twitter.com/' + tweet['user']['screen_name'], :target => '_blank' %> <%= tweet['text'] %></li>
+  <% end %>
+</ul>
